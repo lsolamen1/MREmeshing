@@ -1,0 +1,27 @@
+#!/bin/bash -l 
+# declare a name for this job 
+#PBS -N Modifié_voxelmesh_G3300.v7.3.inv.iso.incomp.visc_SPoff_SF0p0015_CG2p2
+# request the queue (enter the possible names, if omitted, serial is the default) 
+#PBS -q default  
+# request  node  
+#PBS -l nodes=4:ppn=8 
+#PBS -l feature=amd 
+# request some hours of wall time  
+#PBS -l walltime=36:00:00  
+#combine PBS standard output and error files  
+#PBS -j oe  
+# mail is sent to you when the job starts and when it terminates or aborts  
+##PBS -m bea  
+# specify your email address  
+##PBS -M matthew.d.mcgarry@dartmouth.edu  
+# Change to Submission Directory  
+cd $PBS_O_WORKDIR  
+# run the program 
+cat $PBS_NODEFILE | uniq > node_file 
+nnodes=$(cat node_file | wc -l) 
+nprocs=$(cat $PBS_NODEFILE | wc -l) 
+export MKL_NUM_THREADS=1 
+echo Nodes $nnodes 
+echo Procs $nprocs 
+mpirun -np $nprocs -hostfile $PBS_NODEFILE /ihome/mmcgarry/code/MREv7p35/MRE-Zone.v7.35.discov runfile-v7p3visc.dat
+exit 0  

@@ -1,0 +1,159 @@
+Subzone Reconstruction Data File 
+Problem Type <0=Forward Problem Only> <1+=Inverse Problem> 
+1 
+Node File: 
+Modifié_voxelmesh.hom.nod
+Element File: 
+Modifié_voxelmesh.hom.elm
+Boundary Node File: 
+Modifié_voxelmesh.bnd
+Region Stack File: 
+Modifié_voxelmesh.regstack
+Measured Displacement File: 
+1 
+    1.0000d0
+Modifié_voxelmesh.dsp
+Initial Solution File: 
+0 
+Output File Stem: 
+inv\Modifié_voxelmesh_G3300.v7.3.inv.iso.incomp.visc_SPoff_SF0p0015_CG2p2
+Print Detailed Runtime Debugging and Execution Comments <verb> <file>:
+.false.,.false. 
+Material Model <1=isotropic> <2=orthotropic> <3=iso compress>: 
+1 
+Number of Material Properties: 
+3 
+Material Description Style <1=nodal> <2=element> [<shear modulus> <density> <bulk modulus>]: 
+1,1,1 
+Number of Parameters per Material Point: 
+1,1,1 
+Property Scalars: 
+ 3300.d0, 1188.d0, 1000.d0,-0.10000d0,   1648900.d0,      0.d0
+Number of Material Property Mesh Resolutions: 
+3 
+Material Property Mesh Resolutions (x,y,z): 
+0.0008930 , 0.0008930 , 0.0030000 
+0.0044650 , 0.0044650 , 0.0150000 
+0.0089300 , 0.0089300 , 0.0300000 
+Material Mesh Index (1st line real part, 2nd line imag) 
+ 1 2 2 
+1 2 2 
+Reconstruction Indicators: 
+.true.,.true. 
+.false.,.false. 
+.false.,.false. 
+Property Estimate Variance Calculation: 
+.false. 
+Zone Sizes (not including overlap factor, actual size = (1+2*ovlp)*siz) [x y z]: 
+ 9.78164e-01, 9.78164e-01, 9.78164e-01
+Zone Overlap Percentage [x y z]: 
+0.150d0,0.150d0,0.150d0
+Iteration Limits [global zone]: 
+100,1 
+Minimum Parameter Update Size [global zone line]: 
+0.1d0, 0.1d0, 0.1d0
+Number of Zone Iteration Structures: 
+3 
+Iteration Limits for Zone Iteration Structures (NOTE:  provide one less limit than # of structures!!!): 
+10,150 
+Zone Iteration Structures [<# of CG iters> <# of GN iters> <!!! QN CURRENTLY UNAVAILABLE !!!> <# of line search iters>]: 
+1,0,0,1 
+2,0,0,2 
+3,0,0,2 
+Number of Processors per MUMPS Communicator 
+1 
+Maximum Amount of RAM per Processor [MB] 
+999999999 
+ooooooooooo  REGULARIZATION DESCRIPTORS  ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo 
+Regularization Indicators [<TV> <SF> <TK> <MQ> <JW> <constraints> <CG residual> <VH> <McG> <soft prior>]: 
+.false.,.true.,.false.,.false.,.false.,.false.,.true.,.true.,.true.,.false. 
+Number of constant regularization iterations (final N iterations use final regularization weights) 
+30 
+Number of Parameters to Treat with Total Variation: 
+3 
+TV Parameter List: 
+1,2,3 
+TV Delta Values: <1st line real, 2nd line imag> 
+1.d-19,1.d-19,1.d-19 
+1.d-19,1.d-19,1.d-19 
+TV Initial Weights: <1st line real, 2nd line imag> 
+5.d-16,5.d-16,5.d-16 
+5.d-16,5.d-16,5.d-16 
+TV Final Weights: <1st line real, 2nd line imag> 
+5.d-16,5.d-16,5.d-16 
+5.d-16,5.d-16,5.d-16 
+Number of Parameters to Treat with Spatial Filtering: 
+3 
+SF Parameter List: 
+1,2,3 
+SF Gaussian filter initial Widths: <1st line real, 2nd line imag> 
+0.003d0,0.003d0,0.003d0 
+0.003d0,0.003d0,0.003d0 
+SF Final Gaussian width: <1st line real, 2nd line imag> 
+0.0015d0,0.0015d0,0.0015d0 
+0.0015d0,0.0015d0,0.0015d0 
+Number of Parameters to Treat with Tikhonov Regularization: 
+3 
+TK Parameter List: 
+1,2,3 
+TK Initial Weights: <1st line real, 2nd line imag> 
+1.d-18,1.d-18,1.d-18 
+1.d-18,1.d-18,1.d-18 
+TK Final Weights: <1st line real, 2nd line imag> 
+1.d-18,1.d-18,1.d-18 
+1.d-18,1.d-18,1.d-18 
+Number of Parameters to Treat with Marquardt Regularization: 
+3 
+Distance of alpha from 1 at which MQ weights are adjusted: 
+0.25d0 
+MQ Parameter List: 
+1,2,3 
+MQ Weight Delta: <1st line real, 2nd line imag> 
+0.5d0,0.5d0,0.5d0 
+0.5d0,0.5d0,0.5d0 
+MQ Initial Weights: <1st line real, 2nd line imag> 
+1.d2,1.d2,1.d2 
+1.d2,1.d2,1.d2 
+MQ Minimum Weights: <1st line real, 2nd line imag> 
+1.d-11,1.d-11,1.d-11 
+1.d-11,1.d-11,1.d-11 
+Number of Parameters to Treat with Joachimowicz Regularization: 
+3 
+JW Parameter List: 
+1,2,3 
+JW Initial Weights: <1st line real, 2nd line imag> 
+5.d0,5.d0,5.d0 
+5.d0,5.d0,5.d0 
+JW Final Weights: <1st line real, 2nd line imag> 
+5.d0,5.d0,5.d0 
+5.d0,5.d0,5.d0 
+Number of Parameters to Treat with Constraints: 
+3 
+Constraint Parameter List: 
+1,2,3 
+Constraint Weights <converges to exact solution as weight --> inf>: 
+1.d-14,1.d-14,1.d-14 
+Constraint Minimums: 
+200.d0, 1.d0, 1000.d0, -5.d4, 1000.d0, 0.d0 
+Constraint Maximums: 
+5.d5, 5.d5, 1000.d0, -1.d-2, 1.d12, 0.d0 
+CG Residual Scaling Initial Weights: <1st line real, 2nd line imag> 
+0.04d0,0.04d0,0.04d0 
+0.04d0,0.04d0,0.04d0 
+CG Residual Scaling Final Weights: <1st line real, 2nd line imag> 
+0.01d0,0.01d0,0.01d0 
+0.01d0,0.01d0,0.01d0 
+Van Houten Regularization Level: 
+1.2d0 
+Number of parameters to treat with soft prior: 
+3 
+SP Parameter List: 
+1,2,3 
+SP Initial Weights: <1st line real, 2nd line imag> 
+1.d-11,1.d-11,1.d-11 
+1.d-11,1.d-11,1.d-11 
+SP Final Weights: <1st line real, 2nd line imag> 
+1.d-11,1.d-11,1.d-11 
+1.d-11,1.d-11,1.d-11 
+SP start iteration delay (first N iterations do not use soft prior 
+0 
